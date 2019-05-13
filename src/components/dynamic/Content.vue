@@ -10,8 +10,8 @@
 export default {
   data() {
     return {
-      msg: "this is dynamic Content componente",
-      title:"",
+      msg: "this is dynamic Content msg",
+      title:"this is dynamic Content componente",
       content:""
     };
   }
