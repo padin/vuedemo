@@ -21,6 +21,7 @@
       <li><router-link to="/includerouter">嵌套路由</router-link></li>
       <li><router-link to="/elementdemo">ElementUI</router-link></li>
       <li><router-link to="/vuexdemo">Vuex</router-link></li>
+      <li><router-link to="/vuexdemo2">Vuex(二)</router-link></li>
 
     </ul>
     </div>

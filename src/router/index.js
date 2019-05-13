@@ -28,6 +28,7 @@ import UserAdd from '../components/include/user/UserAdd.vue'
 import UserList from '../components/include/user/UserList.vue'
 import ElementDemo from '../components/element/ElementDemo.vue'
 import VuexDemo from '../components/vuex/VuexDemo.vue'
+import VuexDemo2 from '../components/vuex/VuexDemo2.vue'
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
 // 通过 Vue.extend() 创建的组件构造器，
@@ -42,7 +43,7 @@ const routes = [
   { path: '/comp', component: Comp },
   { path: '/lifecycle', component: LifeCycle },
   { path: '/vueresource', component: Vueresource},
-  { path: '/parent2child', component: Parent},
+  { path: '/parent', component: Parent},
   { path: '/news', component: News},
   { path: '/home', component: Home},
   { path: '/main', component: Main},
@@ -61,13 +62,14 @@ const routes = [
   { path: '/includerouter/', component: IncludeRouter},
   { path: '/elementdemo/', component: ElementDemo},
   { path: '/vuexdemo/', component: VuexDemo},
+  { path: '/vuexdemo2/', component: VuexDemo2},
 
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
 const router = new VueRouter({
-  mode:'history',
+//   mode:'history',
   routes // (缩写) 相当于 routes: routes
 })
 

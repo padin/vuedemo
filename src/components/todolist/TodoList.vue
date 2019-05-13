@@ -8,7 +8,7 @@
       <hr>
       <ul>
           <li v-for="(i,k) in list" v-if="!i.checked">
-              <input type="checkbox" v-model="i.checked" > 
+              <input type="checkbox" v-model="i.checked" @change="doUpdate()" > 
               {{i.title}}
               <button @click="doDel()">-</button>
           </li>
@@ -16,8 +16,8 @@
       <h2>已完成</h2>
       <hr>
       <ul>
-          <li v-for="(i,k) in list" v-if="i.checked">
-              <input type="checkbox" v-model="i.checked">
+          <li v-for="(i,k) in list" v-if="i.checked" >
+              <input type="checkbox" v-model="i.checked" @change="doUpdate()">
               {{i.title}}
               <button @click="doDel(k)">-</button>
           </li>
@@ -47,6 +47,9 @@ export default {
        ,doDel(k){
            this.list.splice(k,1)
            storage.remove('list')
+       }
+       ,doUpdate(){
+            storage.set('list',this.list)
        }
    },
    mounted(){
